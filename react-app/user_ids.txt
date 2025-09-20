@@ -1,0 +1,71 @@
+STUDENT IDs:
+Created student account: CS20230001 - Aarav Sharma
+Created student account: CS20230002 - Aditi Patel
+Created student account: CS20230003 - Arjun Singh
+Created student account: CS20230004 - Ananya Gupta
+Created student account: CS20230005 - Aryan Kumar
+Created student account: CS20230006 - Diya Verma
+Created student account: CS20230007 - Ishaan Malhotra
+Created student account: CS20230008 - Kavya Reddy
+Created student account: CS20230009 - Vihaan Joshi
+Created student account: CS20230010 - Riya Mehta
+Created student account: CS20230011 - Rohan Agarwal
+Created student account: CS20230012 - Sanya Kapoor
+Created student account: CS20230013 - Vivaan Choudhury
+Created student account: CS20230014 - Zara Khan
+Created student account: CS20230015 - Advait Mishra
+Created student account: CS20230016 - Anvi Desai
+Created student account: CS20230017 - Dhruv Saxena
+Created student account: CS20230018 - Ishita Banerjee
+Created student account: CS20230019 - Kabir Mehra
+Created student account: CS20230020 - Myra Iyer
+Created student account: CS20230021 - Neil Chauhan
+Created student account: CS20230022 - Pari Sharma
+Created student account: CS20230023 - Reyansh Patel
+Created student account: CS20230024 - Saanvi Singh
+Created student account: CS20230025 - Shaurya Gupta
+Created student account: CS20230026 - Tara Kumar
+Created student account: CS20230027 - Ved Verma
+ CS20230028 - Aisha Malhotra
+ CS20230029 - Arnav Reddy
+ CS20230030 - Avni Joshi
+Creating parent accounts...
+Created parent account: P-CS20230001 - Parent of Aarav Sharma
+Created parent account: P-CS20230002 - Parent of Aditi Patel
+Created parent account: P-CS20230003 - Parent of Arjun Singh
+Created parent account: P-CS20230004 - Parent of Ananya Gupta
+Created parent account: P-CS20230005 - Parent of Aryan Kumar
+Created parent account: P-CS20230006 - Parent of Diya Verma
+Created parent account: P-CS20230007 - Parent of Ishaan Malhotra
+Created parent account: P-CS20230008 - Parent of Kavya Reddy
+Created parent account: P-CS20230009 - Parent of Vihaan Joshi
+Created parent account: P-CS20230010 - Parent of Riya Mehta
+Created parent account: P-CS20230011 - Parent of Rohan Agarwal
+Created parent account: P-CS20230012 - Parent of Sanya Kapoor
+Created parent account: P-CS20230013 - Parent of Vivaan Choudhury
+Created parent account: P-CS20230014 - Parent of Zara Khan
+Created parent account: P-CS20230015 - Parent of Advait Mishra
+Created parent account: P-CS20230016 - Parent of Anvi Desai
+Created parent account: P-CS20230017 - Parent of Dhruv Saxena
+Created parent account: P-CS20230018 - Parent of Ishita Banerjee
+Created parent account: P-CS20230019 - Parent of Kabir Mehra
+Created parent account: P-CS20230020 - Parent of Myra Iyer
+Created parent account: P-CS20230021 - Parent of Neil Chauhan
+Created parent account: P-CS20230022 - Parent of Pari Sharma
+Created parent account: P-CS20230023 - Parent of Reyansh Patel
+Created parent account: P-CS20230024 - Parent of Saanvi Singh
+Created parent account: P-CS20230025 - Parent of Shaurya Gupta
+Created parent account: P-CS20230026 - Parent of Tara Kumar
+Created parent account: P-CS20230027 - Parent of Ved Verma
+Created parent account: P-CS20230028 - Parent of Aisha Malhotra
+Created parent account: P-CS20230029 - Parent of Arnav Reddy
+Created parent account: P-CS20230030 - Parent of Avni Joshi
+TEACHERS userId AND password list:| Teacher Name | Email ID                                                  | Password     |
+| ------------ | --------------------------------------------------------- | ------------ |
+| Ravi Kumar   | [ravi.kumar@school.edu](mailto:ravi.kumar@school.edu)     | Ravi\@1234   |
+| Meena Sharma | [meena.sharma@school.edu](mailto:meena.sharma@school.edu) | Meena\@5678  |
+| Arjun Patel  | [arjun.patel@school.edu](mailto:arjun.patel@school.edu)   | Arjun\@9012  |
+| Priya Nair   | [priya.nair@school.edu](mailto:priya.nair@school.edu)     | Priya\@3456  |
+| Sunil Verma  | [sunil.verma@school.edu](mailto:sunil.verma@school.edu)   | Sunil\@7890  |
+| Anjali Singh | [anjali.singh@school.edu](mailto:anjali.singh@school.edu) | Anjali\@2468 |
+| ---------- | ------------------------------------------------------- | ------------ |
