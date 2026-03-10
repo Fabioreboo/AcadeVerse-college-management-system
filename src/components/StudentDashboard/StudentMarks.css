@@ -1,0 +1,464 @@
+/* Student Marks Page Styles */
+/* Following the design pattern of TeacherDashboard.css and MarksManagement.css */
+/* Using the same color palette and animation from StudentAttendance.css */
+
+.student-marks-management {
+  min-height: 100vh;
+  background: #2c3e50;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Animated background gradient for student marks management */
+.student-marks-background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #1a2a6c, #2c3e50, #4a6491, #3a506b);
+  background-size: 300% 300%;
+  animation: colorShift 12s ease infinite;
+  z-index: 0;
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.student-marks-management::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%),
+              radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%);
+  z-index: 0;
+}
+
+.student-marks-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.student-marks-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: transparent;
+  backdrop-filter: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  max-width: 1400px;
+  text-align: center;
+}
+
+.student-marks-title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.student-marks-title-section h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.student-marks-title-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.breadcrumb-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.breadcrumb-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.breadcrumb-current {
+  color: white !important;
+  font-weight: 600;
+}
+
+.performance-section {
+  padding: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.performance-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.performance-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.performance-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.performance-label {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+.performance-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  padding: 12px 15px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.performance-control:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.performance-control option {
+  background: #2c3e50;
+  color: white;
+}
+
+.marks-info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.marks-info-text {
+  color: white;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.info-icon {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.info-icon:hover {
+  color: white;
+}
+
+.marks-table-container {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-header {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.marks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+.table-head {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.table-header-cell {
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+  text-align: left;
+}
+
+.table-header-cell-center {
+  text-align: center;
+}
+
+.table-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.table-row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.table-row:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.table-cell {
+  color: white;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.table-cell-center {
+  text-align: center;
+}
+
+.grade-pass {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.grade-fail {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.trend-up {
+  color: #2ecc71;
+}
+
+.trend-down {
+  color: #e74c3c;
+}
+
+.trend-flat {
+  color: #f39c12;
+}
+
+.empty-state-card {
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.empty-state-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.empty-state-message {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a2a6c, #2c3e50, #4a6491);
+  width: 100%;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.message.success {
+  background: rgba(46, 204, 113, 0.9);
+}
+
+.message.error {
+  background: rgba(231, 76, 60, 0.9);
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .student-marks-management {
+    padding: 15px;
+  }
+  
+  .student-marks-title-section h1 {
+    font-size: 2rem;
+  }
+  
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .marks-info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .table-header-cell,
+  .table-cell {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .save-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-marks-title-section h1 {
+    font-size: 1.7rem;
+  }
+  
+  .performance-card {
+    padding: 15px;
+  }
+  
+  .save-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .table-header-cell,
+  .table-cell {
+    padding: 8px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .marks-input {
+    width: 70px;
+    padding: 6px 8px;
+  }
+}

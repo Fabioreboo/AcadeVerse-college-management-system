@@ -1,0 +1,579 @@
+/* Student Attendance Page Styles */
+/* Following the design pattern of TeacherDashboard.css and AttendanceManagement.css */
+
+.student-attendance-management {
+  min-height: 100vh;
+  background: #2c3e50;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Animated background gradient for student attendance management */
+.student-attendance-background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #1a2a6c, #2c3e50, #4a6491, #3a506b);
+  background-size: 300% 300%;
+  animation: colorShift 12s ease infinite;
+  z-index: 0;
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.student-attendance-management::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%),
+              radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%);
+  z-index: 0;
+}
+
+.student-attendance-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.student-attendance-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: transparent;
+  backdrop-filter: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  max-width: 1400px;
+  text-align: center;
+}
+
+.student-attendance-title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.student-attendance-title-section h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.student-attendance-title-section p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.breadcrumb-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.breadcrumb-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.breadcrumb-current {
+  color: white !important;
+  font-weight: 600;
+}
+
+.summary-section {
+  padding: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.summary-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.summary-label {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+.summary-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  padding: 12px 15px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.summary-control:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.summary-control option {
+  background: #2c3e50;
+  color: white;
+}
+
+.statistics-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.statistic-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.statistic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.statistic-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.statistic-present {
+  color: #2ecc71;
+}
+
+.statistic-absent {
+  color: #e74c3c;
+}
+
+.statistic-late {
+  color: #f39c12;
+}
+
+.statistic-total {
+  color: #3498db;
+}
+
+.statistic-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin: 10px 0;
+}
+
+.statistic-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.attendance-table-container {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-header {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+.table-head {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.table-header-cell {
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+  text-align: left;
+}
+
+.table-header-cell-center {
+  text-align: center;
+}
+
+.table-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.table-row:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.table-row:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.table-cell {
+  color: white;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.table-cell-center {
+  text-align: center;
+}
+
+.status-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-present {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.5);
+}
+
+.status-absent {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.5);
+}
+
+.status-late {
+  background: rgba(243, 156, 18, 0.2);
+  color: #f39c12;
+  border: 1px solid rgba(243, 156, 18, 0.5);
+}
+
+.calendar-section {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-header {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.calendar-day-header {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.calendar-day {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  text-align: center;
+  padding: 15px 5px;
+  border-radius: 5px;
+  position: relative;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.calendar-day:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-day-weekend {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.calendar-day-present {
+  background: rgba(46, 204, 113, 0.1);
+}
+
+.calendar-day-absent {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.calendar-day-late {
+  background: rgba(243, 156, 18, 0.1);
+}
+
+.calendar-day-number {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.calendar-day-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+}
+
+.indicator-present {
+  background-color: #2ecc71;
+}
+
+.indicator-absent {
+  background-color: #e74c3c;
+}
+
+.indicator-late {
+  background-color: #f39c12;
+}
+
+.empty-state-card {
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+}
+
+.empty-state-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.empty-state-message {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a2a6c, #2c3e50, #4a6491);
+  width: 100%;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .student-attendance-management {
+    padding: 15px;
+  }
+  
+  .student-attendance-title-section h1 {
+    font-size: 2rem;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statistics-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .calendar-grid {
+    gap: 1px;
+  }
+  
+  .calendar-day {
+    padding: 10px 2px;
+    min-height: 40px;
+  }
+  
+  .calendar-day-number {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-attendance-title-section h1 {
+    font-size: 1.7rem;
+  }
+  
+  .summary-card {
+    padding: 15px;
+  }
+  
+  .statistic-number {
+    font-size: 1.8rem;
+  }
+  
+  .statistics-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .calendar-day {
+    padding: 8px 1px;
+    min-height: 35px;
+  }
+  
+  .calendar-day-number {
+    font-size: 0.8rem;
+  }
+}
